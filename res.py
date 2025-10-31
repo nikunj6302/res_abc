@@ -1,26 +1,5 @@
 
-"""
-Paper Explainer Pro – FAST Streamlit App (Single File)
-
-✅ Core Features:
-- PDF upload (1 or 2 papers)
-- Section detection
-- TL;DR summary
-- Section explanations
-- Interactive RAG chat
-- Glossary
-- Key contributions
-- Comparison mode (two papers)
-- Study mode (Research Gap Identifier)
-- Export Markdown & DOCX
-
-Run:
-  pip install -U streamlit pymupdf google-generativeai sentence-transformers scikit-learn faiss-cpu numpy pandas python-docx
-  streamlit run app.py
-"""
-
-
-import  io, re, json
+import  io, re, json, os
 from dataclasses import dataclass
 from typing import List, Dict, Tuple
 
@@ -313,3 +292,4 @@ with right:
         _, fullB = load_pdf_bytes(file_b.read())
         comp = gcall(p_compare(st.session_state.state["full_a"], fullB, lang))
         st.markdown(comp)
+
