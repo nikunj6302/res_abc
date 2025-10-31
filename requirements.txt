@@ -1,0 +1,9 @@
+streamlit
+pymupdf
+google-generativeai
+sentence-transformers
+scikit-learn
+faiss-cpu
+numpy
+pandas
+python-docx
